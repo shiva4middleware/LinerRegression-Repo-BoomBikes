@@ -1,19 +1,49 @@
-# Bike Sharing Demand Prediction
+# Bike Sharing Demand Prediction using Linear Regression
 
-## Overview
-This project builds a multiple linear regression model to predict the demand for shared bikes. The goal is to identify factors that significantly influence bike demand and help the company optimize its business strategy.
+## Project Overview
+This project implements **Multiple Linear Regression** to predict bike-sharing demand for Boom Bikes, leveraging temporal and weather-related data. It provides insights for demand forecasting, helping the business optimize bike availability and maintenance.
 
-## Dataset
-- **Source:** Provided dataset on daily bike demand.
-- **Features:** Various meteorological and temporal factors.
-- **Target Variable:** `cnt` (total bike rentals).
+## Problem Statement
+The goal of this project is to predict the number of bike rentals for each hour using the historical data. The dataset includes features like date, temperature, humidity, and weather conditions, which impact bike demand.
+
+## Dataset Description
+The dataset contains hourly data for the bike-sharing system. Key features include:
+- **datetime**: Date and time
+- **season**: Season of the year
+- **holiday**: Whether it is a holiday or not
+- **workingday**: Whether the day is a working day
+- **weather**: Weather conditions
+- **temp**: Temperature
+- **humidity**: Humidity
+- **windspeed**: Wind speed
+- **cnt**: Total number of bike rentals (target variable)
 
 ## Methodology
-1. **Data Preparation**
-   - Categorical encoding for `season` and `weathersit`.
-2. **Exploratory Data Analysis**
-   - Visualizations and correlation analysis.
-3. **Model Building**
-   - Multiple linear regression using `sklearn`.
-4. **Evaluation**
-   - R-squared score and residual analysis.
+
+1. **Data Preprocessing**:
+   - Handling missing values
+   - Encoding categorical variables
+   - Feature scaling
+   
+2. **Exploratory Data Analysis**:
+   - Identifying correlations between features and the target variable
+   - Visualizing trends and seasonality
+   
+3. **Modeling**:
+   - Training a Multiple Linear Regression model
+   - Evaluating model performance using metrics like R-squared and RMSE
+
+4. **Results**:
+   - Comparison of predicted vs. actual demand
+   - Model performance metrics
+
+## Requirements
+
+- Python >= 3.x
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shiva4middleware/LinerRegression-Repo-BoomBikes.git
